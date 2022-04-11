@@ -17,7 +17,7 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    padding: 18px;
+    padding: 14px;
 }
 
 .cabecalho-imagem {
@@ -31,20 +31,26 @@ body {
 
 .cabecalho-menu-item {
     font-family: 'Sarala', sans-serif;
+    margin: 18px;
     color: #FFF2E7;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 400;
+    position: relative;
 }
 
-.cabecalho-menu-item:hover {
-    display: inline-block;
-    border-bottom: 0.5px solid #ECD6C4;
-    transition: border-bottom 1s;
+a::before {
+    content: ' ';
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 0px;
+    height: 1px;
+    transition: all 1s ease;
     background-color: #2F2325;
-    padding: 3px;
-    border-radius: 20px;
-    box-shadow: rgba(0, 0, 0, 0.25);
-    transition: background-color 1s;
+}
+
+a:hover::before {
+    width: 100%;
 }
 
 .conteudo {
@@ -90,18 +96,19 @@ body {
     border: none;
     box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+    transition: all 400ms ease;
 }
 
-.botao-conteudo-principal:hover {
-    background-color: rgba(236, 214, 196, 0.53);
-    transition: background-color 1s;
+.botao-conteudo-principal:hover{
+    background-color: rgba(225, 225, 225, 0.3);
+    transition: all background-color 1s ease;
 }
 
 .botao-menu-item {
     color: #2F2325;
 }
-
-
 
 .imagem-conteudo-principal {
     height: 430px;
